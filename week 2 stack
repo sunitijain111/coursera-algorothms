@@ -1,0 +1,14 @@
+1. linked list approach is nice
+2. loiterig is : holdig refrence of a object that is no loger useful. like in stack while poping from a linked list ,
+    we should delete the top node. Don;t leave on memory
+3. linked list is costly in time     & space
+4. use aray but space limited, so RESIZE it
+5. if each time we overflow, we can declare array of size= cuu_size+1, push all elemets in it. The complexity is n^2. 1+2+3+4..+N= N^2.
+   so each time over flow occurs, declare capacity = curr_capcity * 2. i this way  average complecxity is O(n). since before repush all array elmets, 
+   we would need to insert N ele  first. 
+   N(to upsh N items) + (2+ 4+ 8 + ...N)(cost of repush) ~= 3N. exp(2+ 4+ ..= 2*(1+ 2^(logN))/(1+2)= 2*(1+N^(log2))/(1+2) ~= 2*N)
+6. should we half on pop?
+   NP , THRASHING , if user push pops, push,  pops then the array is kept resizig and capacity becomes the O(N^2). 
+7. other way: do size half only whe capcity is 1/4th. 
+   i.e. if capacity== 8, do;t shrink until size==2! after that size= 8/2= 4.
+8. how many times resize is called for push of n numbres? log(N).   
