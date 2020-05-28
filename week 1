@@ -1,0 +1,8 @@
+1.union
+2. code preset i graph section
+3. use path compression : while finding root-> do :
+ if(par[i]!=i)
+ {
+  par[i]= par[par[i]];
+  i= par[i];
+ }
